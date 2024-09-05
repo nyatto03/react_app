@@ -40,21 +40,21 @@
   }
 
   select.custom-form-control {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none; // Định nghĩa thuộc tính chuẩn
+    -webkit-appearance: none; // Dành cho các trình duyệt WebKit (Safari, Chrome)
+    -moz-appearance: none; // Dành cho Firefox
 
     padding-right: 15px;
-
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 15px 100%;
-
     cursor: pointer;
 
     &:disabled {
       cursor: not-allowed;
     }
-  }
+}
+
 
   .custom-checkbox-control {
     line-height: 28px;

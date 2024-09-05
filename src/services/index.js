@@ -1,1 +1,1 @@
-export { default as adminService } from './adminService';
+export { default as ApiService } from './adminService';
