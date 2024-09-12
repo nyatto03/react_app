@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 // import { FormattedMessage } from "react-intl";
 import { connect } from 'react-redux';
-import './UserManage.scss';
 import { getAllUsers } from '../../services/userService';
+import ModalUser from './ModalUser';
+import './UserManage.scss';
 
 class UserManage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             arrUsers: [],
+            isOpenModalUser: false,
         };
     }
 
@@ -22,12 +24,36 @@ class UserManage extends Component {
         }
     }
 
+    handleAddNewUser = () => {
+        this.setState({
+            isOpenModalUser: true,
+        });
+    };
+
+    toggleUserModal = () => {
+        this.setState({
+            isOpenModalUser: false,
+        });
+    };
+
     render() {
         let arrUsers = this.state.arrUsers;
 
         return (
             <div className="user-container">
+                <ModalUser
+                    isOpen={this.state.isOpenModalUser}
+                    toggleFromParent={this.toggleUserModal}
+                />
                 <div className="title text-center">Manage users</div>
+                <div className="mx-1">
+                    <button
+                        className="btn btn-primary px-3"
+                        onClick={() => this.handleAddNewUser()}
+                    >
+                        <i className="fas fa-plus me-2"></i>Add new user
+                    </button>
+                </div>
                 <div className="users-table mt-3 mx-1">
                     <table id="customers">
                         <thead>
@@ -40,7 +66,6 @@ class UserManage extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {console.log(arrUsers)}
                             {arrUsers &&
                                 arrUsers.map((item, index) => {
                                     return (
