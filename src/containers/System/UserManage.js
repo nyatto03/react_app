@@ -49,12 +49,12 @@ class UserManage extends Component {
                                             <td>{item.firstName}</td>
                                             <td>{item.lastName}</td>
                                             <td>{item.address}</td>
-                                            <td>
-                                                <button className="btn-edit">
-                                                    <i className="fas fa-pencil-alt"></i>
+                                            <td className="d-flex justify-content-evenly">
+                                                <button className="btn btn-primary btn-sm px-3 py-2">
+                                                    <i className="fas fa-pencil-alt d-flex justify-content-center"></i>
                                                 </button>
-                                                <button className="btn-delete">
-                                                    <i className="fas fa-trash"></i>
+                                                <button className="btn btn-danger btn-sm px-3 py-2">
+                                                    <i className="fas fa-trash d-flex justify-content-center"></i>
                                                 </button>
                                             </td>
                                         </tr>
