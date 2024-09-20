@@ -1,0 +1,118 @@
+.section {
+    height: 330px;
+
+    .section-container {
+        margin: 0 186px;
+        display: flex;
+        flex-direction: column;
+
+        .section-header {
+            height: 60px;
+            margin-bottom: 30px;
+            padding-top: 30px;
+
+            .title-section {
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float: right;
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                display: block;
+                background: #ebebeb;
+                color: black;
+                cursor: pointer;
+                text-transform: uppercase;
+                border-radius: 8px;
+
+                &:hover {
+                    color: #fff;
+                    background: #f7d800;
+                }
+            }
+        }
+
+        .section-body {
+            // width: 280px;
+
+            .section-customize {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                height: 100%; /* Make sure the div has a set height */
+                position: relative;
+
+                .bg-image {
+                    width: 278px;
+                    height: 150px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    margin-top: 8px;
+                }
+
+                .description-img {
+                    padding-top: 8px;
+                    margin-bottom: 8px;
+                    font-size: 16px;
+                    width: 278px;
+                    text-align: center;
+
+                    /* Giới hạn văn bản hiển thị 2 dòng */
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /* WebKit-specific */
+                    -webkit-box-orient: vertical; /* WebKit-specific */
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    /* Standard property */
+                    line-clamp: 2;
+                }
+            }
+        }
+
+        .slick-prev {
+            left: -16px !important;
+            z-index: 1000 !important;
+            height: 48px !important;
+            width: 44px !important;
+            background: #fff !important;
+            border: 2px solid #d7d7d7 !important;
+            border-radius: 20%;
+            top: 45% !important; /* Center vertically */
+            transform: translateY(-50%) !important;
+
+            &:hover {
+                background: #eceaea !important;
+            }
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-family: FontAwesome !important;
+            color: red !important;
+        }
+
+        .slick-next {
+            right: -16px !important;
+            z-index: 1000 !important;
+            height: 48px;
+            width: 44px;
+            border-radius: 20%;
+            background: #fff !important;
+            border: 2px solid #d7d7d7 !important;
+            top: 40% !important; /* Center vertically */
+            transform: translateY(-50%) !important;
+
+            &:hover {
+                background: #eceaea !important;
+            }
+        }
+    }
+}

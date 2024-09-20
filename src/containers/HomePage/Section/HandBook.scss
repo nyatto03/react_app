@@ -1,0 +1,19 @@
+.section-handbook {
+    background: #f3ffff;
+
+    height: 355px !important;
+
+
+    .section-container {
+        .bg-image {
+            background-image: url(../../../assets/handbook/145209-review-he-thong-y-te-thu-cuc-tci.png);
+        }
+
+        .section-body {
+            .slick-next,
+            .slick-prev {
+                top: 40% !important;
+            }
+        }
+    }
+}

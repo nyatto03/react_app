@@ -1,0 +1,31 @@
+.section-about {
+    height: 500px;
+
+    .section-about-content {
+        display: flex;
+        gap: 20px; /* Khoảng cách giữa phần video và phần mô tả */
+        align-items: flex-start; /* Căn chỉnh các phần tử về phía trên cùng */
+    }
+
+    .content-left {
+        flex: 1; /* Tăng tỷ lệ không gian cho video */
+    }
+
+    .content-right {
+        flex: 1; /* Giảm tỷ lệ không gian cho phần mô tả */
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 5px;
+        color: #333;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ cho phần mô tả */
+        line-height: 1.6;
+    }
+
+    .content-left iframe {
+        width: 100%;
+        height: auto;
+        border: none; /* Đảm bảo video chiếm toàn bộ không gian của phần chứa */
+        border-radius: 5px; /* Bo góc cho video */
+        aspect-ratio: 16/9; /* Đảm bảo tỷ lệ chuẩn cho video */
+    }
+}

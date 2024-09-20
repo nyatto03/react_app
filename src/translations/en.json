@@ -1,4 +1,26 @@
 {
+    "homeheader": {
+        "speciality": "Specialty",
+        "searchdoctor": "Find doctors by specialty",
+        "health-facility": "Healthcare facility",
+        "select-room": "Select hospital or clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a skilled doctor",
+        "fee": "Examination package",
+        "check-health": "General health check-up",
+        "support": "Support"
+    },
+    "banner": {
+        "title1": "HEALTH PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "search-placeholder": "Search for specialties",
+        "child1": "Specialty examination",
+        "child2": "Remote consultation",
+        "child3": "General examination",
+        "child4": "Medical tests",
+        "child5": "Health and wellness",
+        "child6": "Dental check-up"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",
