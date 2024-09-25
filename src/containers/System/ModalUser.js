@@ -15,7 +15,7 @@ class ModalUser extends Component {
     }
 
     componentDidMount() {
-        console.log('didmount modal user');
+        // console.log('didmount modal user');
     }
 
     toggle = () => {

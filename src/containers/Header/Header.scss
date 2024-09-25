@@ -1,23 +1,85 @@
-@import "../../styles/common.scss";
+@import '../../styles/common.scss';
 
 .header-container {
     z-index: 99;
     display: flex;
     justify-content: space-between;
-    background-color: $colormain;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: $common-text-color;
     height: 40px;
     position: relative;
-    .btn-logout {
-        color: $common-text-color;
-        line-height: 40px;
-        height: 40px;
-        padding: 0 10px;
-        &:hover {
-            background-color: darken($colormain, 5);
+
+    .header-right-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .welcome {
+            cursor: pointer;
+            color: $text-color-dark;
+            margin: 0 10px;
         }
-        i {
-            font-size: $base-size + 1px;
+
+        .language-vi {
+            cursor: pointer;
+            opacity: 0.5;
+            margin: 0 10px;
+
+            span {
+                color: $text-color-dark;
+            }
+            &.active {
+                opacity: 1;
+                span {
+                    color: orange;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+                span {
+                    color: orange;
+                }
+            }
+        }
+
+        .language-en {
+            cursor: pointer;
+            margin: 0 10px;
+            opacity: 0.5;
+
+            span {
+                color: $text-color-dark;
+            }
+            &.active {
+                opacity: 1;
+                span {
+                    color: blue;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+                span {
+                    color: blue;
+                }
+            }
+        }
+
+        .btn-logout {
+            color: $text-color-dark;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 10px;
+            &:hover {
+                background-color: darken($colormain, 5);
+                color: white;
+            }
+            i {
+                font-size: $base-size + 1px;
+            }
         }
     }
 }

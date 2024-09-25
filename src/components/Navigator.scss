@@ -1,84 +1,114 @@
-@import "../styles/common.scss";
+@import '../styles/common.scss';
 
 .navigator-menu {
     display: flex;
     margin: 0;
     padding: 0;
+
     &.list-unstyled,
     .list-unstyled {
         list-style-type: none;
     }
+
     .menu-group {
         &:hover {
             cursor: pointer;
-            background-color: darken($colormain, 5);
+            background-color: darken(
+                $colormain,
+                5
+            ); // Giữ nguyên màu hover cho menu group
         }
+
         .menu-group-name {
             line-height: 40px;
             padding: 0 15px;
             border-right: 1px solid $border;
+            color: $text-color-dark; // Sử dụng màu tối để nổi bật trên nền trắng
+
             &:first-child {
                 border-left: 1px solid $border;
             }
         }
+
         .menu-list {
             display: none;
-            background-color: $bg-menu-color;
-            box-shadow: 2px 2px 4px 0 $box-shadow-color;
-            -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
-            color: $text-in-light;
+            background-color: white; // Nền menu chuyển sang màu trắng
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1); // Bóng đổ nhẹ để phân tách khỏi nền trắng
+            color: $text-color-dark; // Sử dụng màu tối cho chữ để dễ đọc
             position: absolute;
             padding: 0;
+
             .menu {
-                width: 205px;
+                width: auto;
+                min-width: 250px;
                 padding: 0 15px;
                 height: 35px;
                 line-height: 35px;
                 text-transform: none;
+
+                &.active {
+                    a {
+                        color: orange !important;
+                    }
+
+                    background-color: #ededed;
+                }
+
                 .menu-link {
                     text-decoration: none;
-                    color: $text-in-light;
+                    color: $text-color-dark; // Đảm bảo liên kết có màu dễ đọc trên nền trắng
                 }
+
                 .sub-menu-list {
                     display: none;
-                    background-color: $bg-menu-color;
-                    box-shadow: 2px 2px 4px 0 $box-shadow-color;
-                    -webkit-box-shadow: 2px 2px 4px 0 $box-shadow-color;
+                    background-color: white; // Nền submenu cũng chuyển sang màu trắng
+                    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1); // Bóng đổ nhẹ
                     position: absolute;
                     top: 0;
                     left: 205px;
                     padding: 0;
+
                     .sub-menu {
                         padding: 0 15px;
                         height: 35px;
                         line-height: 35px;
                         white-space: nowrap;
+
                         &:hover {
-                            background-color: darken($bg-menu-color, 5);
+                            background-color: lighten(
+                                $bg-menu-color,
+                                10
+                            ); // Màu hover nhẹ để phân biệt với nền trắng
                         }
+
                         .sub-menu-link {
                             text-decoration: none;
-                            color: $text-in-light;
+                            color: $text-color-dark; // Đảm bảo liên kết có màu dễ đọc
                         }
+
                         a {
                             display: block;
                         }
+
                         &.active a {
                             font-weight: 500;
                             color: $colormain;
                         }
                     }
                 }
+
                 &.active span {
                     font-weight: 500;
-                    color: $colormain;
+                    color: orange;
                 }
+
                 &:hover {
-                    background-color: darken($bg-menu-color, 3);
+                    background-color: rgb(219, 218, 217) !important;
                     .sub-menu-list {
                         display: block;
                     }
                 }
+
                 .icon-right {
                     display: block;
                     position: absolute;
@@ -87,6 +117,7 @@
                 }
             }
         }
+
         &:hover {
             .menu-list {
                 display: block;
